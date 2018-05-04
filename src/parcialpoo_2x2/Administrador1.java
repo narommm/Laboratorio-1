@@ -1,10 +1,7 @@
-
 package parcialpoo_2x2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
 
 public class Administrador1 {
 
@@ -13,37 +10,37 @@ public class Administrador1 {
     }
 
     public Administrador1(ArrayList<Piso> Pisos) {
-        Habitaciones = new ArrayList<>();
-        
-        this.Habitaciones = Habitaciones;
+        //   Habitaciones = new ArrayList<>();
+
+        //  this.Habitaciones = Habitaciones;
     }
-    
-    public void add(){
+
+    public void add() {
         Habitacion habitacion = new Habitacion();
-        
+
         habitacion.add(habitacion);
-       
+
         Scanner leer = new Scanner(System.in);
-       
+
         System.out.println("Ingrese tipo de habitacion");
         System.out.print(": ");
         habitacion.setTipo(leer.nextLine());
-       
+
         System.out.println("Ingrese precio");
         System.out.print(": ");
         habitacion.setPrecio(leer.nextFloat());
-        
+
         System.out.println("Ingrese el estado");
         System.out.print(": ");
         habitacion.setEstado(leer.nextInt(0));
     }
-    
-    public void add(Habitacion habitacion) throws Exception{
-        if(habitacion != null) {
+
+    /*public void add(Habitacion habitacion) throws Exception {
+        if (habitacion != null) {
             if (!Habitacion.contains(habitacion)) {
-            public static Habitacion.add(habitacion);
+                Habitacion.add (habitacion);
             }
-            Exception e = new Exception("No se permiten datos duplicados");
+Exception e = new Exception("No se permiten datos duplicados");
             throw e;
         } else {
             throw new Exception("No se puede agregar un estudiante nulo");
@@ -86,6 +83,5 @@ lista.remove(Piso.Identificador);
     }
    
     
-        
+      */  
     }
-
