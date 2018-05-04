@@ -13,6 +13,15 @@ public class Cliente {
     public String piso;
     private int tarjetaDeCredito;
 
+    /**
+     * Sirve para
+     * @param nombre
+     * @param telefno
+     * @param DUI
+     * @param numerodeHabitacion
+     * @param piso
+     * @param tarjetaDeCredito 
+     */
     public Cliente(String nombre, String telefno, String DUI, String numerodeHabitacion, String piso, int tarjetaDeCredito) {
         this.nombre = nombre;
         this.telefno = telefno;
