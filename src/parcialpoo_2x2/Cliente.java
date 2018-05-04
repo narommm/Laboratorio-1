@@ -1,7 +1,7 @@
 package parcialpoo_2x2;
 
 /**
- * DJGASKDJFGalsG
+ * Clase que represrant a un clientwe
  * @author andreu
  */
 public class Cliente {
