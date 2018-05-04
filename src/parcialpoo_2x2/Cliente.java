@@ -1,14 +1,17 @@
-
 package parcialpoo_2x2;
 
-
+/**
+ * DJGASKDJFGalsG
+ * @author andreu
+ */
 public class Cliente {
-public String nombre;
-private String telefno;
-private String DUI;
-public String numerodeHabitacion;
-public String piso;
-private int tarjetaDeCredito;
+
+    public String nombre;
+    private String telefno;
+    private String DUI;
+    public String numerodeHabitacion;
+    public String piso;
+    private int tarjetaDeCredito;
 
     public Cliente(String nombre, String telefno, String DUI, String numerodeHabitacion, String piso, int tarjetaDeCredito) {
         this.nombre = nombre;
@@ -18,9 +21,6 @@ private int tarjetaDeCredito;
         this.piso = piso;
         this.tarjetaDeCredito = tarjetaDeCredito;
     }
-
-
-
 
     public String getNombre() {
         return nombre;
@@ -69,5 +69,5 @@ private int tarjetaDeCredito;
     public void setTarjetaDeCredito(int tarjetaDeCredito) {
         this.tarjetaDeCredito = tarjetaDeCredito;
     }
-      
+
 }
