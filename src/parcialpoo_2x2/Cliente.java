@@ -5,7 +5,7 @@
  */
 package parcialpoo_2x2;
 
-//import java.util.Scanner;
+import java.util.Scanner;
 
 /**
  *
@@ -14,7 +14,7 @@ package parcialpoo_2x2;
 
 public class Cliente {
     public String nombre;
-    private String dui;Scanner input=new Scanner(System.in);
+    private String dui;
     private Reserva fecha;
     private Administrador1 registra;
 
