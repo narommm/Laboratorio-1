@@ -59,18 +59,18 @@ public class Cliente {
         return fecha;
     }
 
-    public void setFecha(Reserva fecha) {
+    public void setFecha(int annio,int mes,int dia,int annios,int mess,int dias) {
         Scanner input = new Scanner(System.in);
         Reserva reserva = new Reserva();
         
         while(true){
-            reserva.Registrarentrada(0, 0, 0);
+            reserva.Registrarentrada(annio,mes,dia);
             break;
         }
         
-        reserva.Registrarsalida(0, 0, 0);
+        reserva.Registrarsalida(annios,mess,dias);
         reserva.det_estacion(0);
-        this.fecha = fecha;
+        this.fecha = reserva;
     }
     
     public String getDui() {
