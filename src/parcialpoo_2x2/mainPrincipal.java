@@ -28,7 +28,7 @@ public class mainPrincipal {
 
     public void menuHotel() {
 
-        ReservaDeHotel.crearhabitaciones(6, 9);
+        ReservaDeHotel.crearhabitaciones(6, 10);
         //Scanner input = new Scanner(System.in);
         Scanner datos = new Scanner(System.in);
 
