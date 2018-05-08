@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author andreu
+ * @author Gaby Salguero
  */
 
 public class Cliente {
@@ -60,10 +60,10 @@ public class Cliente {
     }
 
     public void setFecha(Reserva fecha) {
+        Scanner input = new Scanner(System.in);
         Reserva reserva = new Reserva();
         
         while(true){
-            
             reserva.Registrarentrada(0, 0, 0);
             break;
         }
