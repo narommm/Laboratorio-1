@@ -18,14 +18,14 @@ public class Tipohab {
         return precio;
     }
     
-    public void setPrecio(){
+    public void setPrecio(double precio){
         this.precio =  precio;
     }
      
     public double GetPrecioDoble(){
         return preciodoble;
     }
-    public void setPreciodoble(){
+    public void setPreciodoble(double preciodoble){
         this.preciodoble = preciodoble;
     }
     
