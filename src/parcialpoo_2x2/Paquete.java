@@ -1,7 +1,10 @@
 
 package parcialpoo_2x2;
 
-
+/**
+ *
+ * @author Eduardo
+ */
 public class Paquete {
     private final int basico = 1;
     private final int premium = 0;
