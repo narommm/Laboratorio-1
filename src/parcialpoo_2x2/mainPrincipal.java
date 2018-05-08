@@ -58,21 +58,24 @@ public class mainPrincipal {
                            // Administrador1.nuevaReservacion();
                             // System.out.println(" Añadiendo Reservacion ");
                             
-                            Administrador1 in=new Administrador1();
+                        Administrador1 in=new Administrador1();
                         String nombre=in.getNombre("Ingresa nombre del Cliente");            
                         int dui=in.getDui("Ingresa DUI");
-                        String estado=in.getEstado("Ingresa el estdo R de la habitacion para reservar");
+                       // String estado=in.getEstado("Ingresa el estdo R de la habitacion para reservar");
                         int numero=in.getNumeroHabitacion("Ingrese numero de habitacion");
                         String piso=in.getPiso("Ingrese la letra del piso");
+                        String num=String.valueOf(numero);
+                        String diu=String.valueOf(dui);
+                        ReservaDeHotel.agregarHabitacion(piso, num, nombre, diu);
                   
                   
                   
                         System.out.println("Nombre:"+ nombre);
                         System.out.println("DUI:"+ dui);
-                        System.out.println("Targeta de Credito:"+ estado);
+                     //   System.out.println("Targeta de Credito:"+ estado);
                         System.out.println("Numero de Habitacion:"+ numero);
                         System.out.println("Piso:"+ piso);
-                        System.out.println(" Añadiendo Reservacion ");
+                       // System.out.println(" Añadiendo Reservacion ");
                             break;
 
                         case 2:
@@ -80,7 +83,7 @@ public class mainPrincipal {
                             datos.nextLine();
                             System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
                             String n = datos.nextLine();
-                            Administrador1.habilitar(n);
+                            ReservaDeHotel.eliminarHabitacion(n);
                             break;
 
                         case 3:
@@ -88,10 +91,10 @@ public class mainPrincipal {
                             System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
                             datos.nextLine();
                             String x = datos.nextLine();
-                            //habi.deshabilitarHabitacion(y);
+                            
                             Habitacion habi = ReservaDeHotel.listaDeHabitaciones.get(x);
-                            //System.out.println("hola2");
-                            habi.Cliente.insertarfechas(2019, 8, 1, 2019, 8, 3);
+                          
+                            habi.getCliente().setFecha(2018, 8, 1, 2018, 8, 5);
                             ReservaDeHotel.agregarHabitacion(x, habi);
                             System.out.println("Reserva modificada!");
                             break;
@@ -101,7 +104,7 @@ public class mainPrincipal {
                             System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
                             datos.nextLine();
                             String y = datos.nextLine();
-                            Administrador1.habilitar(y);
+                            ReservaDeHotel.eliminarHabitacion(y);
                             break;
 
                         case 5:
@@ -111,7 +114,7 @@ public class mainPrincipal {
                             String yy = datos.nextLine();
                             System.out.println("Ingrese el numero de habitacion: ");
                             String yyy = datos.nextLine();
-                            Administrador1.deshabilitar(yy, yyy);
+                            ReservaDeHotel.eliminarHabitacion(yy, yyy);
                             break;
 
                         case 6:

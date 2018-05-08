@@ -37,7 +37,7 @@ public class Administrador1 {
         }
         return Integer.parseInt(DUI);
     }
-
+/*
     public String getEstado(String reservar) {
         String est = "";
         while (est.equals("")) {
@@ -48,7 +48,7 @@ public class Administrador1 {
             }
         }
         return est;
-    }
+    }*/
 
     public int getNumeroHabitacion(String reservar) {
         String n = "";
