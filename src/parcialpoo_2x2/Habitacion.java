@@ -1,101 +1,90 @@
 
 package parcialpoo_2x2;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-
+/**
+ *
+ * @author ronald
+ */
 public class Habitacion {
+    public String piso;
+    public String numeroDeHabitacion;
+    public String tipo;
+    public Paquete paquete;
+    public String estado;
+    public double precio=0;
+    public Cliente cliente;
 
-    static boolean contains(Habitacion habitacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Cliente getCliente() {
+        return cliente;
     }
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
     
-   public String tipo;
-    public double precio;
-    public int estado=0;
-
-    public Habitacion(String tipo, double precio) {
+    public Habitacion(){}
+ 
+    public Habitacion(String piso, String numeroDeHabitacion,String tipo, Paquete paquete, String estado, double precio) {
+        this.piso = piso;
+        this.numeroDeHabitacion = numeroDeHabitacion;
         this.tipo = tipo;
+        this.paquete = paquete;
+        this.estado = estado;
         this.precio = precio;
     }
     
-    
-
-    Habitacion(String piso, String numeroDeHabitacion, String tipo, String paquete, String estado, double precio) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Habitacion(String piso, String numeroDeHabitacion,  String estado) {
+        this.piso = piso;
+        this.numeroDeHabitacion = numeroDeHabitacion;
+       
+        this.estado = estado;
+        
     }
-
-    Habitacion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //----------------------------------------------------------------------------------------------------------------------------------
+    public String getPiso() {
+        return piso;
     }
-    
-    
-     public void add(Habitacion habitacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setPiso(String piso) {
+        this.piso = piso;
     }
-
-   
-
-   public String getTipo() {
+    public String getNumeroDeHabitacion() {
+        return numeroDeHabitacion;
+    }
+    public void setNumeroDeHabitacion(String numeroDeHabitacion) {
+        this.numeroDeHabitacion = numeroDeHabitacion;
+    }
+    public String getTipo(){
         return tipo;
     }
-
-    public void setTipo(String tipo) {
+    public void setTipo(String tipo){
         this.tipo = tipo;
     }
-
+    public Paquete getPaquete() {
+        return paquete;
+    }
+    public void setPaquete(Paquete paquete) {
+        this.paquete = paquete;
+    }
+    public String Estado() {
+        return estado;
+    }
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     public double getPrecio() {
         return precio;
     }
-
     public void setPrecio(double precio) {
-        this.precio = precio;
+        this.precio += precio;
     }
-
-    public int getEstado() {
-        return estado;
-    }
-
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
+    //---------------------------------------------------------------------------------------------------------------------------------------
     
-    public void escoger_paquete(){
-        int imputt;
-        Paquete p = new Paquete();
-        p.escogerPaquete(1);
-        System.out.println("que paquete desea escoger?");
-         Scanner imput= new Scanner(System.in);
-    }
-
-    String getPiso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    String getNumeroDeHabitacion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    String getPaquete() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    String Estado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void habilitarHabitacion(int m) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void deshabilitarHabitacion(int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
-  
-            
+    
+    //-------------------------------------------------------------------------------------------------------------------------------------------
+   
 }
+
     
 
 
