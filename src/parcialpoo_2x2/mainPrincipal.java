@@ -55,8 +55,24 @@ public class mainPrincipal {
 
                     switch (opcion) {
                         case 1:
-                            Administrador1.nuevaReservacion();
+                           // Administrador1.nuevaReservacion();
                             // System.out.println(" Añadiendo Reservacion ");
+                            
+                            Administrador1 in=new Administrador1();
+                        String nombre=in.getNombre("Ingresa nombre del Cliente");            
+                        int dui=in.getDui("Ingresa DUI");
+                        String estado=in.getEstado("Ingresa el estdo R de la habitacion para reservar");
+                        int numero=in.getNumeroHabitacion("Ingrese numero de habitacion");
+                        String piso=in.getPiso("Ingrese la letra del piso");
+                  
+                  
+                  
+                        System.out.println("Nombre:"+ nombre);
+                        System.out.println("DUI:"+ dui);
+                        System.out.println("Targeta de Credito:"+ estado);
+                        System.out.println("Numero de Habitacion:"+ numero);
+                        System.out.println("Piso:"+ piso);
+                        System.out.println(" Añadiendo Reservacion ");
                             break;
 
                         case 2:
