@@ -6,30 +6,31 @@ package parcialpoo_2x2;
  * @author Eduardo
  */
 public class Paquete {
-    private final int basico = 1;
-    private final int premium = 0;
+
+    private String nombre;
+    
+    public String getNombre(){
+        return nombre;
+    }
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
     
     private int tipo;
     private double precio;
     
-    public void escogerPaquete(int tipo){
-    
-        if(tipo==0){
-            System.out.println("usted escogio premium");
-            precio=150;
-        }
-        else {
-            System.out.println("usted escogio el paquete basico");
-            precio=0;
-        }
-        
-        
+    public int getTipo(){
+        return tipo;
     }
-
-    public double getPrecio() {
+    public void setTipo(int tipo){
+    this.tipo = tipo;
+    }
+    public double getPrecio(){
         return precio;
     }
-    
-    
-    
+    public void setPrecio(double precio){
+        this.precio = precio;
+    }
+
+
 }
