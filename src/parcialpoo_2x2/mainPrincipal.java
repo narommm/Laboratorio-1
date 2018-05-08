@@ -62,10 +62,12 @@ public class mainPrincipal {
                         String nombre=in.getNombre("Ingresa nombre del Cliente");            
                         int dui=in.getDui("Ingresa DUI");
                        // String estado=in.getEstado("Ingresa el estdo R de la habitacion para reservar");
+                        int tarjetaC=in.getTarjetaCredito("Ingrese ultimos cuatro digitos de la tarjeta");
                         int numero=in.getNumeroHabitacion("Ingrese numero de habitacion");
                         String piso=in.getPiso("Ingrese la letra del piso");
                         String num=String.valueOf(numero);
                         String diu=String.valueOf(dui);
+                        String tarjeta=String.valueOf(tarjetaC);
                         ReservaDeHotel.agregarHabitacion(piso, num, nombre, diu);
                   
                   
@@ -73,6 +75,7 @@ public class mainPrincipal {
                         System.out.println("Nombre:"+ nombre);
                         System.out.println("DUI:"+ dui);
                      //   System.out.println("Targeta de Credito:"+ estado);
+                        System.out.println("Tarjeta de credito:"+tarjetaC);
                         System.out.println("Numero de Habitacion:"+ numero);
                         System.out.println("Piso:"+ piso);
                        // System.out.println(" Añadiendo Reservacion ");

@@ -37,6 +37,18 @@ public class Administrador1 {
         }
         return Integer.parseInt(DUI);
     }
+    
+    public int getTarjetaCredito(String reservar) {
+        String tarjetadecredito = "";
+        while (tarjetadecredito.equals("")) {
+            System.out.println(reservar);
+            tarjetadecredito = sc.nextLine();
+            if (!tarjetadecredito.matches("^[0-9]{4}")) {//cada digito entre 0 y 9, y tarjeta de credito las ultimas 4 cifras
+            tarjetadecredito="";
+            }
+        }
+        return Integer.parseInt(tarjetadecredito);
+    }
 /*
     public String getEstado(String reservar) {
         String est = "";
