@@ -63,6 +63,7 @@ public class Cliente {
         Reserva reserva = new Reserva();
         
         while(true){
+            
             reserva.Registrarentrada(0, 0, 0);
             break;
         }

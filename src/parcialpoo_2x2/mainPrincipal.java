@@ -1,152 +1,131 @@
 package parcialpoo_2x2;
-import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-
+/**
+ *
+ * @author Gaby Salguero
+ */
 public class mainPrincipal {
-    
-    
-    
-    
-    
-static ArrayList<Habitacion> listaDeHabitaciones = new ArrayList<Habitacion>();
 
-
-         public static  void agregarHabitacion(String piso, String numeroDeHabitacion, String tipo, String paquete, String estado, double precio)
-        {
-        
-          listaDeHabitaciones.add(new Habitacion(piso,numeroDeHabitacion, tipo, paquete, estado, precio));
-        }
-       
-        public static void eliminarHabitacion(int i)
-        {
-        
-          listaDeHabitaciones.remove(i);
-        }
-        
-        
-        public static void mostrar(){
-            System.out.println("Piso\tNumeroDeHabitacion\tTipo\tPaquete\tEstado\tPrecio");
-            int j=listaDeHabitaciones.size();
-            
-            for(int k=0; k < j;k++){
-                Habitacion hx = listaDeHabitaciones.get(k);
-                System.out.println(k+"\t"+hx.getPiso()+"\t"+hx.getNumeroDeHabitacion()+"\t"+hx.getTipo()+"\t"+hx.getPaquete()+"\t"+hx.Estado()+"\t"+hx.getPrecio());
-            }
-
-        }
-   
-    
-            
-            //reservarHabitacion(Piso, Numero);
-            
-            
-            //int cantHabitaciones=sc2.nextInt();
-            //agregarHabitacionNuevo(piso,numeroDeHabitacion, tipo, paquete, estado, precio);
-    
-    
-    
-   
     public static void main(String[] args) {
-        // TODO code application logic here
-      
-       
-     
-         
-            int opcion=0,seguir=0;
-            Scanner entrada= new Scanner(System.in);
-            do{
-                System.out.println("MENU DEL HOTEL");
-                System.out.println("1- Reservar Nueva Habitacion");
-                System.out.println("2- Cancelar Reservacion");
-                System.out.println("3- Modificar Reservacion");
-                System.out.println("4- Habilitar Habitacion");
-                System.out.println("5- Deshabilitar Habitacion");
-                System.out.println("6- Agregar Piso");
-                System.out.println("7- Eliminar Piso");
-                System.out.println("8- Mostrar Habitaciones");
-                System.out.println("9- Cambiar Precio");
-                System.out.println("10- Salir ");
+        mainPrincipal menufinal = mainPrincipal.getInstance();
 
-                opcion=entrada.nextInt();
+        menufinal.menuHotel();
+    }
 
-        
-        
-                switch(opcion){
-                    case 1:
-                        Administrador1.nuevaReservacion();
-                        System.out.println(" Añadiendo Reservacion ");
-                      
-                        break;
+    private static mainPrincipal menufinal;
 
-                    case 2:
-                        mostrar();
-                       System.out.println("ingrese el piso, seguido del numero de Habitacion");
-                       int n=entrada.nextInt();
-                       System.out.println("ingrese el numero de habitacion a habilitar");
-                       int m=entrada.nextInt();
-                       Habitacion hab = listaDeHabitaciones.get(n);
-                       hab.habilitarHabitacion(m);
-                       System.out.println(" Habitacion habilitada con exito!");
-                        break;
+    private mainPrincipal() {
+    }
 
-                    case 3:
-                         mostrar();
-                       System.out.println("ingrese el piso, seguido del numero de Habitacion");
-                       int x=entrada.nextInt();
-                       System.out.println("ingrese el numero de habitaciones a deshabilitar");
-                       int y=entrada.nextInt();
-                       Habitacion habi = listaDeHabitaciones.get(x);
-                       habi.deshabilitarHabitacion(y);
-                       System.out.println("Habitacion habiliatda con exito!");
-                        break;
+    public static mainPrincipal getInstance() {
+        if (menufinal == null) {
+            menufinal = new mainPrincipal();
+        }
+        return menufinal;
+    }
 
-                    case 4:
-                        Administrador1.mostrar();
-                       System.out.println("ingrese el piso, seguido del numero de Habitacion");
-                       int z=entrada.nextInt();
-                       listaDeHabitaciones.remove(z);
-                       System.out.println("Habitacion Eliminada con exito!");
-                        break;
+    public void menuHotel() {
 
-                    case 5:
-                        Administrador1.mostrar();
-                        break;
-                    case 6:
-                        System.exit(0);
-                        break;
+        ReservaDeHotel.crearhabitaciones(6, 9);
+        //Scanner input = new Scanner(System.in);
+        Scanner datos = new Scanner(System.in);
 
+        int intento = 0;
 
-            }
-                System.out.println("Para continuar digite 1");
-                seguir=entrada.nextInt();
-            }while(seguir==1);  
+        do {
+            int opcion = 0, seguir = 0;
+            //Scanner entrada = new Scanner(System.in);
+            do {
+                System.out.println("------ MENU DEL HOTEL ------");
+                System.out.println("1- Reservar nueva habitacion.");
+                System.out.println("2- Cancelar reservacion.");
+                System.out.println("3- Modificar reservacion.");
+                System.out.println("4- Habilitar habitacion.");
+                System.out.println("5- Deshabilitar habitacion.");
+                System.out.println("6- Mostrar habitaciones.");
+                System.out.println("7- Mostrar habitaciones reservadas.");
+                System.out.println("8- Cambiar precio.");
+                System.out.println("9- Salir.");
 
-             }else {
-                System.out.println("Acceso no autorizado");
-                Scanner leer= new Scanner(System.in);
-                System.out.println("ingrese 1 para continuar o 2 para salir");
-                int intento = leer.nextInt();
-            }
-        }while(intento==1);
+                //opcion = entrada.nextInt();
+                try {
+                    opcion = datos.nextInt();
 
-    
+                    switch (opcion) {
+                        case 1:
+                            Administrador1.nuevaReservacion();
+                            // System.out.println(" Añadiendo Reservacion ");
+                            break;
 
+                        case 2:
+                            //ReservaDeHotel.mostrar();
+                            datos.nextLine();
+                            System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
+                            String n = datos.nextLine();
+                            Administrador1.habilitar(n);
+                            break;
 
-    /**
-     *
-     */
+                        case 3:
+                            //ReservaDeHotel.mostrar();
+                            System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
+                            datos.nextLine();
+                            String x = datos.nextLine();
+                            //habi.deshabilitarHabitacion(y);
+                            Habitacion habi = ReservaDeHotel.listaDeHabitaciones.get(x);
+                            //System.out.println("hola2");
+                            habi.Cliente.insertarfechas(2019, 8, 1, 2019, 8, 3);
+                            ReservaDeHotel.agregarHabitacion(x, habi);
+                            System.out.println("Reserva modificada!");
+                            break;
 
-}    
-    
+                        case 4:
+                            // ReservaDeHotel.mostrar();
+                            System.out.println("Ingrese el piso, seguido del numero de habitacion: ");
+                            datos.nextLine();
+                            String y = datos.nextLine();
+                            Administrador1.habilitar(y);
+                            break;
+
+                        case 5:
+                            //ReservaDeHotel.mostrar();
+                            datos.nextLine();
+                            System.out.println("Ingrese el piso: ");
+                            String yy = datos.nextLine();
+                            System.out.println("Ingrese el numero de habitacion: ");
+                            String yyy = datos.nextLine();
+                            Administrador1.deshabilitar(yy, yyy);
+                            break;
+
+                        case 6:
+                            ReservaDeHotel.mostrar();
+                            break;
+
+                        case 7:
+                            ReservaDeHotel.mostrar2();
+                            break;
+
+                        case 8:
+
+                            break;
+
+                        case 9:
+                            System.exit(0);
+                            //System.out.println("Salida exitosa...");
+                            break;
+
+                        default:
+                            System.out.println("Por favor ingrese una opcion valida.");
+                    }
+                    System.out.println("Para continuar digite 1...");
+                    seguir = datos.nextInt();
+
+                } catch (InputMismatchException e) {
+                    System.err.println("Por favor, Ingrese un número.");
+                    datos.nextLine();
+                }
+            } while (seguir == 1);
+        } while (intento == 1);
+    }
 }
-
-
-
-
-
-
-
-
-
